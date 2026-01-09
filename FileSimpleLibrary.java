@@ -7,7 +7,7 @@ class Buku {
 
     public Buku (String penulisBuku, int stokBuku){
         this.penulisBuku = penulisBuku;
-        
+        this.stokBuku = stokBuku;
     }
 
 
@@ -25,7 +25,7 @@ public class FileSimpleLibrary {
             System.out.println("3. Pinjam buku");
             System.out.println("4. Kembalikan buku");
             System.out.println("5. Keluar");
-            System.out.print(">>");
+            System.out.print(">> ");
             int opsi = scanner.nextInt();
 
             if (opsi == 5) {
@@ -56,6 +56,12 @@ public class FileSimpleLibrary {
                         penyimpananBuku.put(judulBukuBaru, bukuBaru);
                         System.out.println("Buku berjudul '" + judulBukuBaru + "' berhasil di-tambahkan ke penyimpanan");
                     }
+
+                    case 2:
+                        int ctr = 1;
+                        for (String buku : penyimpananBuku.keySet()){
+                            System.out.println(ctr + ". " + buku);
+                        }
                 }
             }
         }
