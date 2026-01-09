@@ -77,30 +77,34 @@ public class FileSimpleLibrary {
                         break;
 
                     case 3:
+                        System.out.println();
                         for (String namaBuku : penyimpananBuku.keySet()){
                             System.out.println("- " + namaBuku);
                         }
 
                         scanner.nextLine();
-                        System.out.print("Masukkan judul buku yang ingin di-pinjam: ");
+                        System.out.print("\nMasukkan judul buku yang ingin di-pinjam: ");
                         String namaBukuYangInginDipinjam = scanner.nextLine();
 
                         if (!penyimpananBuku.containsKey(namaBukuYangInginDipinjam)){
-                            System.out.println("Buku berjudul '" + namaBukuYangInginDipinjam + "' tidak ada di penyimpanan!");
+                            System.out.println("\nBuku berjudul '" + namaBukuYangInginDipinjam + "' tidak ada di penyimpanan!");
                         }
                         else {
                             Buku ambilDataStokBuku = penyimpananBuku.get(namaBukuYangInginDipinjam);
                             int cekStokBuku = ambilDataStokBuku.stokBuku;
 
-                            if (cekStokBuku > 1) {
-                                System.out.println("Berhasil meminjam buku berjudul '" + namaBukuYangInginDipinjam + "'.");
-                                cekStokBuku -= 1;
+                            if (cekStokBuku >= 1) {
+                                System.out.println("\nBerhasil meminjam buku berjudul '" + namaBukuYangInginDipinjam + "'.");
+                                ambilDataStokBuku.stokBuku -= 1;
                             }
                             else {
-                                System.out.println("Stok habis, buku sedang dipinjam semua");
+                                System.out.println("\nStok habis, buku sedang dipinjam semua");
                             }
                         }
                         break;
+
+                    case 4:
+
 
                             
                 }
