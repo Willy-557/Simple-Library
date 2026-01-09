@@ -106,7 +106,7 @@ public class FileSimpleLibrary {
 
                     case 4:
                         scanner.nextLine();
-                        System.out.print("\nMasukkan judul buku yang ingin di-pinjam: ");
+                        System.out.print("\nMasukkan judul buku yang ingin di-kembalikan: ");
                         String namaBukuYangInginDikembalikan = scanner.nextLine();
 
                         if (!penyimpananBuku.containsKey(namaBukuYangInginDikembalikan)){
