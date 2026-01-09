@@ -64,7 +64,8 @@ public class FileSimpleLibrary {
                         }
                         else {
                             int ctr = 1;
-                            System.out.println();
+                            System.out.println("\nList Buku: ");
+                            System.err.println("-----------------------------");
                             for (String buku : penyimpananBuku.keySet()){
                                 System.out.println(ctr + ". " + "Judul Buku   : " + buku );
                                 Buku ambilDataBuku = penyimpananBuku.get(buku);
@@ -77,7 +78,7 @@ public class FileSimpleLibrary {
                         break;
 
                     case 3:
-                        System.out.println();
+                        System.out.println("\nList Buku: ");
                         for (String namaBuku : penyimpananBuku.keySet()){
                             System.out.println("- " + namaBuku);
                         }
@@ -104,9 +105,21 @@ public class FileSimpleLibrary {
                         break;
 
                     case 4:
+                        scanner.nextLine();
+                        System.out.print("\nMasukkan judul buku yang ingin di-pinjam: ");
+                        String namaBukuYangInginDikembalikan = scanner.nextLine();
 
+                        if (!penyimpananBuku.containsKey(namaBukuYangInginDikembalikan)){
+                            System.out.println("\nBuku berjudul '" + namaBukuYangInginDikembalikan + "' tidak ada di penyimpanan dan tidak bisa dikembalikan!");
+                        }
+                        else {
+                            Buku ambilDataStokBuku = penyimpananBuku.get(namaBukuYangInginDikembalikan);
+                            int cekStokBuku = ambilDataStokBuku.stokBuku;
+                            System.out.println("\nBerhasil mengembalikan buku berjudul '" + namaBukuYangInginDikembalikan + "'.");
+                            ambilDataStokBuku.stokBuku += 1;
+                        }
+                        break;
 
-                            
                 }
             }
         }
