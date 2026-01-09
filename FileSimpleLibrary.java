@@ -45,7 +45,17 @@ public class FileSimpleLibrary {
                     System.out.print("Masukkan nama penulis: ");
                     String namaPenulisBuku = scanner.nextLine();
 
-                    
+                    System.out.print("Masukkan Stok buku: ");
+                    int stokBukuAwal = scanner.nextInt();
+
+                    if (penyimpananBuku.containsKey(judulBukuBaru)){
+                        System.out.println("Buku berjudul '" + judulBukuBaru + "' sudah ada di penyimpanan!");
+                    }
+                    else {
+                        Buku bukuBaru = new Buku(namaPenulisBuku, stokBukuAwal);
+                        penyimpananBuku.put(judulBukuBaru, bukuBaru);
+                        System.out.println("Buku berjudul '" + judulBukuBaru + "' berhasil di-tambahkan ke penyimpanan");
+                    }
                 }
             }
         }
