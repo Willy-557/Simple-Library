@@ -19,7 +19,7 @@ public class FileSimpleLibrary {
         HashMap <String, Buku> penyimpananBuku = new HashMap<>();
 
         while (true) {
-            System.out.println("--- Library ---");
+            System.out.println("\n--- Library ---");
             System.out.println("1. Tambah buku baru");
             System.out.println("2. Lihat daftar buku");
             System.out.println("3. Pinjam buku");
@@ -29,17 +29,17 @@ public class FileSimpleLibrary {
             int opsi = scanner.nextInt();
 
             if (opsi == 5) {
-                System.out.println("Terimakasih!");
+                System.out.println("\nTerimakasih!");
                 break;
             }
             else if (opsi > 5 || opsi < 1){
-                System.out.println("Invalid input!");
+                System.out.println("\nInvalid input!");
             }
             else {
                 switch (opsi) {
                     case 1:
                     scanner.nextLine();
-                    System.out.print("Masukkan judul buku: ");
+                    System.out.print("\nMasukkan judul buku: ");
                     String judulBukuBaru = scanner.nextLine();
                     
                     System.out.print("Masukkan nama penulis: ");
@@ -49,12 +49,12 @@ public class FileSimpleLibrary {
                     int stokBukuAwal = scanner.nextInt();
 
                     if (penyimpananBuku.containsKey(judulBukuBaru)){
-                        System.out.println("Buku berjudul '" + judulBukuBaru + "' sudah ada di penyimpanan!");
+                        System.out.println("\nBuku berjudul '" + judulBukuBaru + "' sudah ada di penyimpanan!");
                     }
                     else {
                         Buku bukuBaru = new Buku(namaPenulisBuku, stokBukuAwal);
                         penyimpananBuku.put(judulBukuBaru, bukuBaru);
-                        System.out.println("Buku berjudul '" + judulBukuBaru + "' berhasil di-tambahkan ke penyimpanan");
+                        System.out.println("\nBuku berjudul '" + judulBukuBaru + "' berhasil di-tambahkan ke penyimpanan");
                     }
 
                     case 2:
