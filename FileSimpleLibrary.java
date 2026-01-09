@@ -119,7 +119,6 @@ public class FileSimpleLibrary {
                             ambilDataStokBuku.stokBuku += 1;
                         }
                         break;
-
                 }
             }
         }
