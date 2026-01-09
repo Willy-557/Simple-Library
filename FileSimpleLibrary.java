@@ -2,6 +2,14 @@ import java.util.Scanner;
 import java.util.HashMap;
 
 class Buku {
+    String penulisBuku;
+    int stokBuku;
+
+    public Buku (String penulisBuku, int stokBuku){
+        this.penulisBuku = penulisBuku;
+        this.stokBuku = stokBuku;
+    }
+
 
 }
 
@@ -28,7 +36,17 @@ public class FileSimpleLibrary {
                 System.out.println("Invalid input!");
             }
             else {
-                
+                switch (opsi) {
+                    case 1:
+                    scanner.nextLine();
+                    System.out.print("Masukkan judul buku: ");
+                    String judulBukuBaru = scanner.nextLine();
+                    
+                    System.out.print("Masukkan nama penulis: ");
+                    String namaPenulisBuku = scanner.nextLine();
+
+                    
+                }
             }
         }
     }
