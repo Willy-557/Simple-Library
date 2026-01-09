@@ -56,11 +56,18 @@ public class FileSimpleLibrary {
                         penyimpananBuku.put(judulBukuBaru, bukuBaru);
                         System.out.println("\nBuku berjudul '" + judulBukuBaru + "' berhasil di-tambahkan ke penyimpanan");
                     }
+                    break;
 
                     case 2:
                         int ctr = 1;
+                        System.out.println();
                         for (String buku : penyimpananBuku.keySet()){
-                            System.out.println(ctr + ". " + buku);
+                            System.out.println(ctr + ". " + "Judul Buku   : " + buku );
+                            Buku ambilDataBuku = penyimpananBuku.get(buku);
+                            System.out.println("   Penulis buku : " + ambilDataBuku.penulisBuku);
+                            System.out.println("   Stok buku    : " + ambilDataBuku.stokBuku);
+                            System.err.println("-----------------------------");
+                            ctr += 1;
                         }
                 }
             }
