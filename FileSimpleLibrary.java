@@ -77,7 +77,18 @@ public class FileSimpleLibrary {
                         break;
 
                     case 3:
-                        
+                        for (String namaBuku : penyimpananBuku.keySet()){
+                            System.out.println("- " + namaBuku);
+                        }
+
+                        scanner.nextLine();
+                        System.out.print("Masukkan judul buku yang ingin di-pinjam: ");
+                        String namaBukuYangInginDipinjam = scanner.nextLine();
+
+                        if (!penyimpananBuku.containsKey(namaBukuYangInginDipinjam)){
+                            System.out.println("Buku berjudul '" + namaBukuYangInginDipinjam + "' tidak ada di penyimpanan!");
+                        }
+
                             
                 }
             }
