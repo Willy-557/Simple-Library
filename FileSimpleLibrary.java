@@ -59,16 +59,22 @@ public class FileSimpleLibrary {
                     break;
 
                     case 2:
-                        int ctr = 1;
-                        System.out.println();
-                        for (String buku : penyimpananBuku.keySet()){
-                            System.out.println(ctr + ". " + "Judul Buku   : " + buku );
-                            Buku ambilDataBuku = penyimpananBuku.get(buku);
-                            System.out.println("   Penulis buku : " + ambilDataBuku.penulisBuku);
-                            System.out.println("   Stok buku    : " + ambilDataBuku.stokBuku);
-                            System.err.println("-----------------------------");
-                            ctr += 1;
+                        if (penyimpananBuku.isEmpty()) {
+                            System.out.println("Penyimpanan buku masih kosong!");
                         }
+                        else {
+                            int ctr = 1;
+                            System.out.println();
+                            for (String buku : penyimpananBuku.keySet()){
+                                System.out.println(ctr + ". " + "Judul Buku   : " + buku );
+                                Buku ambilDataBuku = penyimpananBuku.get(buku);
+                                System.out.println("   Penulis buku : " + ambilDataBuku.penulisBuku);
+                                System.out.println("   Stok buku    : " + ambilDataBuku.stokBuku);
+                                System.err.println("-----------------------------");
+                                ctr += 1;
+                            }
+                        }
+                            
                 }
             }
         }
