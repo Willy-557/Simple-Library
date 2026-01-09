@@ -7,7 +7,7 @@ class Buku {
 
     public Buku (String penulisBuku, int stokBuku){
         this.penulisBuku = penulisBuku;
-        this.stokBuku = stokBuku;
+        
     }
 
 
