@@ -88,6 +88,19 @@ public class FileSimpleLibrary {
                         if (!penyimpananBuku.containsKey(namaBukuYangInginDipinjam)){
                             System.out.println("Buku berjudul '" + namaBukuYangInginDipinjam + "' tidak ada di penyimpanan!");
                         }
+                        else {
+                            Buku ambilDataStokBuku = penyimpananBuku.get(namaBukuYangInginDipinjam);
+                            int cekStokBuku = ambilDataStokBuku.stokBuku;
+
+                            if (cekStokBuku > 1) {
+                                System.out.println("Berhasil meminjam buku berjudul '" + namaBukuYangInginDipinjam + "'.");
+                                cekStokBuku -= 1;
+                            }
+                            else {
+                                System.out.println("Stok habis, buku sedang dipinjam semua");
+                            }
+                        }
+                        break;
 
                             
                 }
