@@ -74,6 +74,10 @@ public class FileSimpleLibrary {
                                 ctr += 1;
                             }
                         }
+                        break;
+
+                    case 3:
+                        
                             
                 }
             }
